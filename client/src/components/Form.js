@@ -3,20 +3,21 @@ import React from 'react';
 const Form = (props) => {
   const{ onSubmit, onChange, promoCode, validationMsg} = props
   return(
-    <div>
+    <div className='form'>
       <form onSubmit={onSubmit}>
-        <label>
+        <label className='title'>
           Promotional code
           <input 
+          className='input'
           type='text' 
           name='promoCode' 
           value={promoCode}
           onChange={onChange}>
           </input>
+          <p className='message'>{validationMsg}</p>
         </label>
-        <input type='submit' value='Submit Code' />
+        <input className='button' type='submit' value='Submit Code' />
       </form>
-      <p>{validationMsg}</p>
     </div>
   )
 }
