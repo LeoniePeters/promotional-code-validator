@@ -3,10 +3,16 @@ const validatePromotionCode = (code) => {
   const reducer = (acc, val, currentIndex) => { return acc + val * (9 - currentIndex) };
   console.log('array', array)
   console.log('reducer', array.reduce(reducer, 0))
+  const check = array.some((element, index, array) => {
+    return element === array[index + 1] && element === array[index + 2]
+  })
+  console.log('check', check)
 
   if (array.length === 9) {
-    if(array.reduce(reducer, 0) % 11 === 0) {
-      return true
+    if (array.reduce(reducer, 0) % 11 === 0) {
+      if (!check) {
+        return true
+      }
     }
   }
   return false
