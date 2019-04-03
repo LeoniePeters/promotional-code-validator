@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Form from './Form'
-
+import { validateCode } from '../actions/PromoCode'
 
 class FormContainer extends Component {
-  state = { promoCode: null }
+  state = { promoCode: '' }
 
   onSubmit = e => {
-    const { promoCode } = this.state
     e.preventDefault()
-    //validateCode(promoCode)
+    console.log(this.state)
+    this.props.validateCode(this.state)
   }
 
   onChange = e => {
+    console.log('onChange', e.target.name, e.target.value)
     this.setState({ [e.target.name]: e.target.value })
   }
 
@@ -27,4 +28,4 @@ class FormContainer extends Component {
   }
 }
 
-export default FormContainer
+export default connect(null, { validateCode })(FormContainer)
