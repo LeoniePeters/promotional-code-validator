@@ -1,7 +1,8 @@
 const { Router } = require('express');
 const router = new Router();
 
-router.post('/promocode', (req, res, next) => {
+router.post('/promocode', (req, res) => {
+  console.log(req.body)
   const {promoCode} = req.body;
   if(promoCode.toString().length !== 9) {
     res.status(400).send({ message: 
@@ -9,3 +10,5 @@ router.post('/promocode', (req, res, next) => {
   } 
   res.status(200).send({message: 'Valid code, but not the lucky one.'});
 })
+
+module.exports = router
