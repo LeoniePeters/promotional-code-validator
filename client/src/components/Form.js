@@ -14,7 +14,7 @@ const Form = (props) => {
           onChange={onChange}>
           </input>
         </label>
-        <input classname='button' type='submit' value='Submit Code' />
+        <input className='button' type='submit' value='Submit Code' />
       </form>
       <p>{validationMsg}</p>
     </div>

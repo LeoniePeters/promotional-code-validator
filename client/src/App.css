@@ -11,7 +11,22 @@ body {
   padding: 5%;
   width: 50%
 }
-/* 
-.title
+@font-face {font-family: "ConduitITCStd";
+  src: url("//db.onlinewebfonts.com/t/21c555e48aaa200278d63d620a369175.eot");
+  src: url("//db.onlinewebfonts.com/t/21c555e48aaa200278d63d620a369175.eot?#iefix") format("embedded-opentype"),
+  url("//db.onlinewebfonts.com/t/21c555e48aaa200278d63d620a369175.woff2") format("woff2"),
+  url("//db.onlinewebfonts.com/t/21c555e48aaa200278d63d620a369175.woff") format("woff"),
+  url("//db.onlinewebfonts.com/t/21c555e48aaa200278d63d620a369175.ttf") format("truetype"),
+  url("//db.onlinewebfonts.com/t/21c555e48aaa200278d63d620a369175.svg#ConduitITCStd") format("svg");
+}
 
+.title {
+  display: block;
+  font-family: 'ConduitITCStd';
+  font-size: 30px;
+  text-align: center;
+  padding: 30px;
+}
+
+/* 
 .button */
