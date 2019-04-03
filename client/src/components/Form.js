@@ -14,10 +14,10 @@ const Form = (props) => {
           value={promoCode}
           onChange={onChange}>
           </input>
+          <p className='message'>{validationMsg}</p>
         </label>
         <input className='button' type='submit' value='Submit Code' />
       </form>
-      <p className='message'>{validationMsg}</p>
     </div>
   )
 }
