@@ -28,5 +28,20 @@ body {
   padding: 30px;
 }
 
-/* 
-.button */
+
+.button {
+  display: block;
+  background-color: rgb(0, 85, 255);
+	color: white;
+	border: none;
+	padding: 16px 80px 14px 80px;
+  font-family: 'ConduitITCStd';
+  font-size: 20px;
+  margin: auto;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.button:hover {
+  background-color: black;
+}
