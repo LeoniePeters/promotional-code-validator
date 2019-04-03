@@ -15,13 +15,13 @@ const invalidCode = errMessage => ({
 
 export const validateCode = (code) => dispatch => {
   request
-  .post('http://localhost:4000/promocode')
-  .send(code)
-  .then(response => dispatch(validCode(response.body.message)))
-  .catch(err => {
-    if(err.status === 400) {
-      dispatch(invalidCode(err.response.body.message))
-    }
-    console.error(err)
-  })
+    .post('http://localhost:4000/promocode')
+    .send(code)
+    .then(response => dispatch(validCode(response.body.message)))
+    .catch(err => {
+      if (err.status === 400) {
+        dispatch(invalidCode(err.response.body.message))
+      }
+      console.error(err)
+    })
 }

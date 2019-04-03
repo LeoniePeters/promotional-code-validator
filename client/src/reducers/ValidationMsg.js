@@ -7,6 +7,6 @@ export default (state = null, action = {}) => {
     case INVALID_CODE:
       return action.errMessage
     default:
-    return state
+      return state
   }
 }
