@@ -7,7 +7,7 @@ const Form = ({onSumbit, onChange, promoCode}) => {
         <label onSumbit={onSumbit}>
           Promotional code
           <input 
-          type='number' 
+          type='text' 
           name='promoCode' 
           value={promoCode}
           onChange={onChange}>
