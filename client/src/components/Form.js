@@ -1,8 +1,7 @@
 import React from 'react';
 
 const Form = (props) => {
-  const{ onSubmit, onChange, promoCode} = props
-  console.log(props.onSubmit)
+  const{ onSubmit, onChange, promoCode, validationMsg} = props
   return(
     <div>
       <form onSubmit={onSubmit}>
@@ -17,6 +16,7 @@ const Form = (props) => {
         </label>
         <input type='submit' value='Submit Code' />
       </form>
+      <p>{validationMsg}</p>
     </div>
   )
 }

@@ -8,12 +8,10 @@ class FormContainer extends Component {
 
   onSubmit = e => {
     e.preventDefault()
-    console.log(this.state)
     this.props.validateCode(this.state)
   }
 
   onChange = e => {
-    console.log('onChange', e.target.name, e.target.value)
     this.setState({ [e.target.name]: e.target.value })
   }
 
@@ -23,9 +21,14 @@ class FormContainer extends Component {
         onSubmit={this.onSubmit}
         onChange={this.onChange}
         promoCode={this.state.promoCode}
+        validationMsg={this.props.validationMsg}
       />
     )
   }
 }
 
-export default connect(null, { validateCode })(FormContainer)
+const mapStateToProps = state => ({
+  validationMsg: state.validationMsg
+})
+
+export default connect(mapStateToProps, { validateCode })(FormContainer)
