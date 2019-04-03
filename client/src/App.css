@@ -2,3 +2,16 @@ body {
   background-image: url('https://onefit.nl/img/specifics/staticpage/home/nl/sweatjoy-desktop.jpg');
   background-size: 100%;
 }
+
+.form {
+  background-color: white;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 5%;
+  padding: 5%;
+  width: 50%
+}
+/* 
+.title
+
+.button */
