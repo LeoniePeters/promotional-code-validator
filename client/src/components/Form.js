@@ -8,6 +8,7 @@ const Form = (props) => {
         <label className='title'>
           Promotional code
           <input 
+          className='input'
           type='text' 
           name='promoCode' 
           value={promoCode}
@@ -16,7 +17,7 @@ const Form = (props) => {
         </label>
         <input className='button' type='submit' value='Submit Code' />
       </form>
-      <p>{validationMsg}</p>
+      <p className='message'>{validationMsg}</p>
     </div>
   )
 }
